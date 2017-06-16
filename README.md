@@ -1,5 +1,5 @@
 # vmr-converter
-small conversion script to convert data from the vmr to CopticScriptorium / NLP Format
+small conversion script to convert xml data from the vmr to CopticScriptorium / NLP Format
 
 ## before you start
 install required python packages:
@@ -25,6 +25,6 @@ The converter is designed as simple web-app. To run it you need to start it as s
 
 ## use
 - starting the server as mentioned above and go to the address the server is running on
-- retrieve a converted document from vmr: <server-IP>:<PORT>/converter/vmr/docID=<vmr-docID>
-- retrieve a converted document from vmr by page or page-range: <server-IP>:<PORT>/converter/vmr/?docID=<vmr-docID>&pageID=<page>
+- retrieve a converted document from vmr: &gt;server-IP&lt;:&gt;PORT&lt;/converter/vmr/docID=&gt;vmr-docID&lt;
+- retrieve a converted document from vmr by page or page-range: &gt;server-IP&lt;:&gt;PORT&lt;/converter/vmr/?docID=&gt;vmr-docID&lt;&pageID=&gt;page&lt;
 - when running on localhost e.g.: localhost:5000/converter/vmr/?docID=690003&pageID=0-400
