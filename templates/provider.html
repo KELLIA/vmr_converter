@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="content container-fluid">
+        <h2>provider-documentation</h2>
+        <p>you may call the API with a specific provider via converter/&lt;provider&gt;/?[param1]&amp;[param2] ...</p>
+        <p>Following providers are permitted:</p>
+
+        {% for item in provider %}
+        
+            <h3>provider: "{{ item }}"</h3>
+            <!--<p>base-URL: "{{ provider[item]['base'] }}"</p>-->
+            <table class="table-condensed table">
+                <tr>
+                    <th>
+                        parameter
+                    </th>
+                    <th>
+                        description
+                    </th>
+                    <th>
+                        default value
+                    </th>
+                </tr>
+                {% for key, value in provider[item].items() %}
+                {% if not key == 'base' %}
+                <tr>
+                    <td>{{ key }}</td>
+                    <td>{{ value[1] }}</td>
+                    <td>{{ value[0] }}</td>
+                </tr>
+                {% endif %}
+                {% endfor %}
+        </table>
+        
+        {% endfor %}
+
+
+        
+    </div>
+{% endblock %}
